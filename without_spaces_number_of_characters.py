@@ -1,0 +1,5 @@
+n=input()
+k=n.split()
+j=len(k)
+h="".join(k)
+print(len(h))

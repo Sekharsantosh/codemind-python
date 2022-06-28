@@ -1,15 +1,15 @@
 def happy(n):
     s=0
-    while n!=0:
-      r=n%10
-      s=s+r**2
-      n=n//10
-    return s
+    while(n):
+        r=n%10
+        s=s+r**2
+        n=n//10
+    if s<9:
+        return s
+    else:
+        return happy(s)
 n=int(input())
-s=happy(n)
-while s>9:
-      s=happy(s)
-if(s==1 or s==7):
-    print("True")
+if happy(n)==1 or happy(n)==7:
+    print(True)
 else:
-    print("False")
+    print(False)

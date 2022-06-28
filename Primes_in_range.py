@@ -10,5 +10,5 @@ m=int(input())
 c=0
 for i in range(n,m+1):
     if isprime(i):
-        c+=1
+        c=c+1
 print(c)

@@ -1,12 +1,9 @@
 n=int(input())
-import math
-s=math.sqrt(n)
-flag=0
+c=0
 for i in range(1,n//2):
-    if(i==s):
-        flag=1
-        break
-if(flag==1):
-    print("True")
+    if i*i==n:
+        c=1
+if c==1:
+    print(True)
 else:
-    print("False")
+    print(False)

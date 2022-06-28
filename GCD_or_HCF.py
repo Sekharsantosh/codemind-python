@@ -1,6 +1,7 @@
-n,p=map(int,input().split())
-gcd=0
-for i in range(1,p):
-    if(n%i==0 and p%i==0):
-        gcd=i
-print(gcd)
+def gcd(n,m):
+    if m==0:
+        return n
+    else:
+         return gcd(m,n%m)
+n,m=map(int,input().split())
+print(gcd(n,m))

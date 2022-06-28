@@ -1,17 +1,17 @@
 n=int(input())
-a=[]
-s=0
 t=n
-while t:
+b=[]
+s=0
+while(t):
     r=t%10
-    a.append(r)
+    b.append(r)
     t=t//10
-k=len(a)
-h=k
-for i in a:
-    s=s+i**h
-    h-=1
+k=len(b)
+for i in b:
+    if k!=0:
+       s=s+i**k
+       k-=1
 if s==n:
-    print("True")
+    print(True)
 else:
-    print("False")
+    print(False)

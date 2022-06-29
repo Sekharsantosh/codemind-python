@@ -1,17 +1,19 @@
-n=int(input())
-a=list(map(int,input().split()))
-c=0
-m=0
-for i in a:
-       '''print(i,end="  ")'''
-       k=(len(str(i)))
-       if k>m:
-           m=k
-for i in a:
-    if len(str(i))<m:
-        m=len(str(i))
-for i in a:
-    if m==len(str(i)):
+def count(n):
+    c=0
+    if n==1:
+        c=1
+        return c
+    while(n):
+        r=n%10
         c=c+1
-print(c)
-# the end
+        n=n//10
+    return c
+n=int(input())
+k=0
+b=[]
+a=list(map(int,input().split()))
+for i in a:
+    k=count(i)
+    b.append(k)
+print(b.count(min(b)))
+    

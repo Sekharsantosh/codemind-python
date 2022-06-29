@@ -1,18 +1,18 @@
-def palindrome(n):
+def reverse(n):
     t=n
     rev=0
-    while t:
+    while(t):
         r=t%10
         rev=rev*10+r
         t=t//10
     if n==rev:
-        return True
+           return True
     else:
         return False
 n=int(input())
-c=0
 a=list(map(int,input().split()))
+c=0
 for i in a:
-    if palindrome(i):
+    if(reverse(i)):
         c=c+1
 print(c)

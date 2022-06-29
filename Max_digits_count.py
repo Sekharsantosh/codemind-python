@@ -1,12 +1,19 @@
+def count(n):
+    c=0
+    if n==1:
+        c=1
+        return c
+    while(n):
+        r=n%10
+        c=c+1
+        n=n//10
+    return c
 n=int(input())
+k=0
+b=[]
 a=list(map(int,input().split()))
-c=0
-m=0
 for i in a:
-       k=len(str(i))
-       if k>m:
-           m=k
-for i in a:
-    if m==len(str(i)):
-         c=c+1
-print(c)
+    k=count(i)
+    b.append(k)
+print(b.count(max(b)))
+    

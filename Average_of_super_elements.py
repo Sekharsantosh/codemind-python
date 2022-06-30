@@ -1,19 +1,16 @@
 n=int(input())
 a=list(map(int,input().split()))
+c=[]
 s=0
-c=0
-b=[]
 for i in a:
-    #print(i,end=" ")
-    if a.count(i)==i and i not in b:
-        b.append(i)
-        s=s+i
-        c=c+1
-#print(s,c)
-if c==0:
-       print("-1")
-else:
-     k=s/c
+    if i==a.count(i):
+        c.append(i)
+c=set(c)
+for i in c:
+    s=s+i
+if s>0:
+     k=s/len(c)
      print("{:.2f}".format(k))
-     
-     
+else:
+    print(-1)
+

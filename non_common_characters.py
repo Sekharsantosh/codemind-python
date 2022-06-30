@@ -1,15 +1,20 @@
 n=input()
-p=input()
-n=n.split()
-n="".join(n)
+m=input()
 n=n.lower()
-p=p.split()
-p="".join(p)
-p=p.lower()
-s=n+p
-s=sorted(set(s))
-for i in s:
+m=m.lower()
+m=m.split()
+n=n.split()
+m="".join(m)
+n="".join(n)
+n=sorted(set(n))
+m=sorted(set(m))
+l=[]
+for i in n:
+    if i not in m:
+        l.append(i)
+for i in m:
     if i not in n:
-        print(i,end="")
-    elif i not in p:
-        print(i,end="")
+         l.append(i)
+l=sorted(l)
+for i in l:
+    print(i,end="")

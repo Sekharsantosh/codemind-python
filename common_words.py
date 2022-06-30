@@ -1,7 +1,9 @@
 n=input()
-p=input()
+m=input()
 n=n.lower()
-p=p.lower()
-for i in p.split():
-    if i in n.split():
+m=m.lower()
+m=m.split()
+n=n.split()
+for i in m:
+    if i in n:
         print(i,end=" ")

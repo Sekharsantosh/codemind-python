@@ -1,11 +1,8 @@
 n=int(input())
-a=list(map(int,input().split()))
-b=[]
-for i in a:
-    if(i%2!=0):
-        b.append(i)
-for i in a:
-    if(i%2==0):
-        b.append(i)
-print(*b)
-        
+x=list(map(int,input().split()))
+for i in x:
+     if i%2==1:
+            print(i,end=" ")
+for i in x:
+       if i%2==0:
+         print(i,end=" ")

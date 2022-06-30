@@ -1,16 +1,11 @@
 n=int(input())
 a=list(map(int,input().split()))
-s,p=map(int,input().split())
-b=[]
-c=0
-k=0
+m,k=map(int,input().split())
+c=[]
 for i in a:
-    if i in range(s,p+1):
-        b.append(i)
-        c=c+1
-if c==0:
-    print("-1")
+    if i>=m and i<k:
+        c.append(i)
+if len(c)>0:
+    print(min(c))
 else:
-    print(min(b))
-    
-    
+    print(-1)

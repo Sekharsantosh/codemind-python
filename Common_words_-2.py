@@ -9,4 +9,3 @@ for i in n.split():
          
              c=c+1
 print(c)
-

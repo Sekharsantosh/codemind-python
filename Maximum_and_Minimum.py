@@ -1,19 +1,10 @@
 n=int(input())
-Min=0
-Max=0
-a=list(map(int,input().split()))
-for i in a:
-    #print(i)
-    if a.count(i)==i:
-        Max=i
-for i in a:
-    if a.count(i)==i:
-        Min=i
-        break
-    elif a.count!=i:
-        Min=0
-        Max=0
-if Max>=1 and Min>=1:
-    print(Min,Max)
+x=list(map(int,input().split()))
+c=[]
+for i in x:
+    if i==x.count(i):
+        c.append(i)
+if len(c)>0:
+     print(min(c),max(c),end=" ")
 else:
-    print("-1")
+    print(-1)

@@ -1,9 +1,10 @@
 n=input()
 p=input()
+c=0
 n=n.lower()
 p=p.lower()
-c=0
 for i in n.split():
     if i in p.split():
-        c=c+1
+         
+             c=c+1
 print(c)

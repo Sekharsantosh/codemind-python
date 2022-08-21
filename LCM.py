@@ -1,8 +1,18 @@
-n,p=map(int,input().split())
-gcd=0
-if(p>n):
-    for i in range(1,p+1):
-        if n%i==0 and p%i==0:
-            gcd=i
-lcm=(n*p)//gcd
-print(lcm)
+def lcm(n,m):
+    d=1
+    if n>m:
+        k=n
+    else:
+        k=m
+    while True:
+        if k%n==0 and k%m==0:
+             return k
+             break
+        k=k+1
+n,m=map(int,input().split())
+print(lcm(n,m))
+            
+            
+            
+            
+            

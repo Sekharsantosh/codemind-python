@@ -5,24 +5,34 @@ def is_prime(n):
         if n%i==0:
             return False
     return True
-n=int(input())
-for i in range(n):
-    a=int(input())
-    b=a
-    c=a
+def display(a):
+    t=a
+    k=0
+    d=0
+    f=0
+    h=0
     while True:
-        if is_prime(b):
+        t=t+1
+        if is_prime(t):
+            k=t
             break
-        b=b+1
-    while c !=0:
-        if is_prime(c):
+    while True:
+        t=t-1
+        if is_prime(t):
+            d=t
             break
-        c-=1
-    # print(a,b,c)
-    if b-a==a-c:
-        print(c)
-    elif (b-a)<(a-c):
-        print(b)
+    f=abs(k-a)
+    h=abs(a-d)
+    if f<h:#47 51 53 
+        print(k)
+    elif f>h:
+        print(d)
     else:
-        print(c)
-    
+        print(d)
+n=int(input())
+for i in range(0,n):
+    a=int(input())
+    display(a)
+
+
+        

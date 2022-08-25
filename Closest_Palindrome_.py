@@ -1,6 +1,6 @@
-def pali(n):
-    rev=0
+def palindrome(n):
     t=n
+    rev=0
     while t:
         r=t%10
         rev=rev*10+r
@@ -10,25 +10,26 @@ def pali(n):
     else:
         return False
 n=int(input())
-k=0
-l=0
-t=n
-while(t):
-    t=t+1
-    if pali(t):
-        k=t
+#print(n)
+s=0
+d=0
+f=0
+k=n
+while True:
+    k=k+1
+    if palindrome(k):
+        d=k
         break
-f=n
-while(f):
-    f=f-1
-    if pali(f):
-        l=f
+s=n
+while True:
+    s=s-1
+    if palindrome(s):
+        f=s
         break
-d=abs(n-k)
-h=abs(n-l)
-if d<h:
-    print(k)
-elif d>h:
-    print(l)
+#print(f,d)
+if d-n<n-f:
+    print(d)
+elif d-n>n-f:
+    print(f)
 else:
-    print(l,k)
+    print(f,d)

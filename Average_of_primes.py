@@ -1,4 +1,4 @@
-def isprime(n):
+def is_prime(n):
     if n==1:
         return False
     for i in range(2,int(n**0.5)+1):
@@ -6,12 +6,13 @@ def isprime(n):
             return False
     return True
 n=int(input())
-a=list(map(int,input().split()))
 s=0
 c=0
+res=0
+a=list(map(int,input().split()))
 for i in a:
-    if isprime(i):
+    if is_prime(i):
         s=s+i
         c=c+1
-k=s/c
-print("{:.2f}".format(k))
+res=s/c
+print("{:.2f}".format(res))

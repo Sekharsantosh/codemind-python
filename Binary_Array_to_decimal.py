@@ -1,6 +1,8 @@
 n=int(input())
 a=list(map(int,input().split()))
-d=0
+s=0
+k=len(a)
 for i in a:
-    d=d*2+int(i)
-print(d)
+    s=s+(2**(k-1))*i
+    k-=1
+print(s)

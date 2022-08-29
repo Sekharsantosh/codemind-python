@@ -1,12 +1,12 @@
+def is_prime(n):
+    if n==1:
+        return False
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True
 n=int(input())
-for i in range (2,n):
-    if n%i==0:
-        c=1
-        break
-    else:
-        c=0
-if c==0:
+if(is_prime(n)):
     print("prime")
 else:
     print("not a prime")
-        

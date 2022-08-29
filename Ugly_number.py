@@ -1,15 +1,17 @@
 def ugly(n):
-    if(n==1):
-        return 1
-    elif(n%2==0):
-        return ugly(n//2)
-    elif(n%3==0):
-       return ugly(n//3)
-    elif(n%5==0):
-      return ugly(n//5)
-    else:
-        return 0
-    
+    while n%2==0:
+        n=n//2
+    if n==1:
+        return True
+    while n%3==0:
+        n=n//3
+    if n==1:
+        return True
+    while n%5==0:
+        n=n//5
+    if n==1:
+        return True
+    return False
 n=int(input())
 if(ugly(n)):
     print("Ugly Number")

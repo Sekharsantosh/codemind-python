@@ -1,28 +1,28 @@
-def fibonacci(n):
-    c=0
-    f1=0
-    f2=1
-    a=[]
-    while c<=n:
-        f3=f1+f2
+n=int(input())
+#print(n)
+f1=0
+f2=1
+f3=f1+f2
+k=0
+h=0
+a=[]
+for i in range(2,n+1):
         f1=f2
         f2=f3
-        c+=1
+        f3=f1+f2
         a.append(f1)
-    return a
-n=int(input())
-f=fibonacci(n)
-k=0
-s=0
-for i in f:
-    if i<n:
+#print(*a)
+for i in a:
+    if i<n and i!=0:
         k=i
-    elif i>n:
-        s=i
+for i in a:
+    if i>k :
+        h=i
         break
-if n-k<s-n:
+#print(k,h)
+if n-k <h-n:
     print(k)
-elif n-k>s-n:
-    print(s)
-elif n-k==s-n:
-    print(k,s)
+elif n-k>h-n:
+    print(h)
+else:
+    print(k,h)

@@ -1,3 +1,5 @@
 n=input()
-k=len(n.split())
-print(k)
+c=0
+for i in n.split():
+    c=c+1
+print(c)

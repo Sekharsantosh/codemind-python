@@ -1,11 +1,13 @@
 n=input()
-m=input()
-c=0
+k=input()
+l=0
+a=0
 for i in n:
-    if i in m:
-        c=n.index(i)
-if c>0:
+    if k in n:
+        l=1
+        a=n.index(k)
+if l==1:
     print("True")
-    print(c)
+    print(a)
 else:
-    print(False)
+    print("False")

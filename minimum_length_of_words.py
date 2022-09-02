@@ -1,6 +1,5 @@
 n=input()
-k=n.split()
-for i in k:
-    m=len(str(i))
-    print(m)
-    break
+a=[]
+for i in n.split():
+    a.append(len(i))
+print(min(a))

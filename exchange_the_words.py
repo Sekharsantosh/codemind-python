@@ -1,4 +1,4 @@
 n=input()
-k=n.split()
-for i in reversed(k):
-    print(i,end=" ")
+n=n[::-1]
+for i in n.split():
+    print(i[::-1],end=" ")

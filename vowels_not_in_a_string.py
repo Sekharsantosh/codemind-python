@@ -1,16 +1,9 @@
 n=input()
-c=0
-a=[]
-v=set("aeiou")
-for i in v:
+vowels="aeiou"
+k=0
+for i in vowels:
     if i not in n:
-         a.append(i)
-         #print(i)
-         c=1
-    else:
-        c=0
-if c>0:
-    a=sorted(a)
-    print(*a)
-else:
-    print(0)
+        print(i,end=" ")
+        k=1
+if k==0:
+        print("0")
